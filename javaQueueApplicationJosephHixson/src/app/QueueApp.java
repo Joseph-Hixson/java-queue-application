@@ -11,20 +11,20 @@ public class QueueApp {
 		Scanner scanner = new Scanner(System.in);
 		int input = 0;
 		/*
-		 * Interface so user can add/remove tasks and print a list of the tasks.
+		 * Interface so a user can add/remove/removeById/search tasks and print a list of the tasks.
 		 */
-		while (input != 5) {
-			System.out.println("Press 1 to Add a Task to the Queue: ");
-			System.out.println("Press 2 to List All the Tasks: ");
-			System.out.println("Press 3 to Remove a Task: ");
+		while (input != 6) {
+			System.out.println("Press 1 To Add a Task to the Queue: ");
+			System.out.println("Press 2 To List All the Tasks: ");
+			System.out.println("Press 3 To Remove Front Task: ");
 			System.out.println("Press 4 Search for a Task by Id: ");
-			System.out.println("Press 5 to Exit the Application: ");
+			System.out.println("Press 5 To Delete a Task by Id: ");
+			System.out.println("Press 6 to Exit the Application: ");
 			input = scanner.nextInt();
 			scanner.nextLine();
 			
 			switch (input) {
 			case 1:
-
 				System.out.println("Enter the Task Id: ");
 				int id = scanner.nextInt();
 				scanner.nextLine();
@@ -45,6 +45,7 @@ public class QueueApp {
 			case 4:
 				System.out.println("Enter Id");
 				int idSearch = scanner.nextInt();
+				scanner.nextLine();
 				if(queueService.searchById(idSearch) == null) {
 					System.out.println("Task by That Id Does Not Exist");
 				}
@@ -53,6 +54,12 @@ public class QueueApp {
 				}
 				break;
 			case 5:
+				System.out.println("Enter Id");
+				int idDelete = scanner.nextInt();
+				scanner.nextLine();
+				queueService.deleteTaskById(idDelete);
+				break;
+			case 6:
 				System.out.println("System exiting...");
 				break;
 			}

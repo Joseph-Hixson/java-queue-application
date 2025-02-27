@@ -36,7 +36,7 @@ public class TaskQueueService {
 	}
 
 	/*
-	 * method to search through queue.
+	 * Method to search through queue.
 	 */
 	public Task searchById(int id) {
 		for (Task t : queue) {
@@ -44,5 +44,16 @@ public class TaskQueueService {
 				return t;
 		}
 		return null;
+	}
+	/*
+	 * Method to delete task anywhere in the queue by id.
+	 */
+	public void deleteTaskById(int id) {
+		for(Task t: queue) {
+			if(t.getId() == id) {
+				System.out.println(t + "  Has Been Removed.");
+				queue.remove(t);
+			}
+		}
 	}
 }

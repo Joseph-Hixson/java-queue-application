@@ -10,7 +10,7 @@ public class QueueApp {
 		TaskQueueService queueService = new TaskQueueService();
 		Scanner scanner = new Scanner(System.in);
 		int input = 0;
-		while (input < 4) {
+		while (input != 4) {
 			System.out.println("Press 1 to Add a Task to the Queue: ");
 			System.out.println("Press 2 to List All the Tasks: ");
 			System.out.println("Press 3 to Remove a Task: ");

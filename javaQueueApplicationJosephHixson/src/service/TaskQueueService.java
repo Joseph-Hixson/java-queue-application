@@ -24,5 +24,10 @@ public class TaskQueueService {
 		return queue.poll();
 		}
 	}
-	
+	/*
+	 * returns the all the tasks in the queue
+	 */
+	public Queue<Task> listTasks(){
+		return queue;
+	}
 }

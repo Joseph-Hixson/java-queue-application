@@ -1,26 +1,27 @@
 package service;
 import java.util.LinkedList;
+import java.util.Queue;
 
 import model.Task;
 public class TaskQueueService {
 	
-	LinkedList<Task> taskList = new LinkedList<>();
+	private Queue<Task> queue = new LinkedList<>();
 	/*
 	 * Add task to the queue.
 	 */
 	public void enqueue(Task task) {
-		taskList.add(task);
+		queue.add(task);
 	}
 	/*
 	 *  Removes task from the list unless task is empty.
 	 */
 	public Task dequeue() {
-		if(taskList.isEmpty()) {
+		if(queue.isEmpty()) {
 			System.out.println("Task list is empty.");
 			return null;
 		}
 		else {
-		return taskList.poll();
+		return queue.poll();
 		}
 	}
 	

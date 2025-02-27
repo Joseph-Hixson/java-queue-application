@@ -62,6 +62,9 @@ public class QueueApp {
 			case 6:
 				System.out.println("System exiting...");
 				break;
+			default:
+				System.out.println("Wrong Number. Please enter a number between 1 and 6: ");
+				
 			}
 		}
 		scanner.close();

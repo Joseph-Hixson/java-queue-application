@@ -36,10 +36,10 @@ public class QueueApp {
 					}
 					break;
 				case 3:
-				System.out.println("");
-				
+					System.out.println(queueService.dequeue() + " Removed.");
+					break;
 				case 4:
-				System.out.println("System exiting...");
+					System.out.println("System exiting...");
 				break;
 			}
 		}

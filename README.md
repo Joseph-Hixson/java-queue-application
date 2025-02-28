@@ -29,3 +29,6 @@ In QueueApp it checks if the method returns null if it does then it prints out a
 The fucnction deleteTaskById delete task if the id inputed matchs with one in the queue. 
 It prints out a message if the task has been removed.
 With the method dequeue I put check if empty in the javaQueueService class instead of having it in the class QueueApp.
+
+Screenshots of it working in cmd.
+![image](https://github.com/user-attachments/assets/5be66fff-82b8-41c2-88e4-bf3dbdc03beb)

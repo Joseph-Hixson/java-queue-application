@@ -45,17 +45,17 @@ public class QueueApp {
 				System.out.println(queueService.dequeue() + " Removed.");
 				break;
 			case 4:
-				System.out.println("Enter Id");
+				System.out.println("Enter Id: ");
 				int idSearch = scanner.nextInt();
 				scanner.nextLine();
 				if (queueService.searchById(idSearch) == null) {
-					System.out.println("Task by That Id Does Not Exist");
+					System.out.println("Task by That Id Does Not Exist.");
 				} else {
 					System.out.println(queueService.searchById(idSearch));
 				}
 				break;
 			case 5:
-				System.out.println("Enter Id");
+				System.out.println("Enter Id: ");
 				int idDelete = scanner.nextInt();
 				scanner.nextLine();
 				queueService.deleteTaskById(idDelete);

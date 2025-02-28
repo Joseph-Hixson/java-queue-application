@@ -20,6 +20,9 @@ public class TaskQueueService {
 	 * returns the all the tasks in the queue
 	 */
 	public Queue<Task> listTasks() {
+		if (queue.isEmpty()) {
+			System.out.println("Queue is Empty.");
+		}
 		return queue;
 	}
 
@@ -28,7 +31,7 @@ public class TaskQueueService {
 	 */
 	public Task dequeue() {
 		if (queue.isEmpty()) {
-			System.out.println("Task list is empty.");
+			System.out.println("Queue is Empty.");
 			return null;
 		} else {
 			return queue.poll();
@@ -40,7 +43,7 @@ public class TaskQueueService {
 	 */
 	public Task searchById(int id) {
 		if (queue.isEmpty()) {
-			System.out.println("Task list is empty.");
+			System.out.println("Queue is Empty.");
 		} else {
 			for (Task t : queue) {
 				if (t.getId() == id)
@@ -55,7 +58,7 @@ public class TaskQueueService {
 	 */
 	public void deleteTaskById(int id) {
 		if (queue.isEmpty()) {
-			System.out.println("Task list is empty.");
+			System.out.println("Queue is Empty.");
 		} else {
 			for (Task t : queue) {
 				if (t.getId() == id) {

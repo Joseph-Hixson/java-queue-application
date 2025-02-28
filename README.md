@@ -7,10 +7,15 @@ The program allows the user to mange a queue of tasks by adding task to the queu
 functions of the program:
 
 1.Add a task to the queue.
+
 2.Print out a list of all the tasks.
+
 3.Remove the first task in the queue.
+
 4.Search for a task by their id number.
+
 5.Delete a task by their id number.
+
 6.Exit application with done.
 
 Instructions to Compile:
@@ -20,6 +25,7 @@ Open cmd and go to folder that has this program and then type: javac -d bin src/
 Instructions to Run:
 
 After program compiles type: java -cp bin app.QueueApp Program then should be running in cmd.
+
 Changes made from sample structure:
 
 Created the methods in javaQueueService searchById and deleteTaskById. 

@@ -62,7 +62,7 @@ public class TaskQueueService {
 		} else {
 			for (Task t : queue) {
 				if (t.getId() == id) {
-					System.out.println(t + "  Has Been Removed.");
+					System.out.println(t + " Has Been Removed.");
 					queue.remove(t);
 				}
 			}

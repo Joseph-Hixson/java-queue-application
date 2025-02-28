@@ -39,20 +39,29 @@ public class TaskQueueService {
 	 * Method to search through queue.
 	 */
 	public Task searchById(int id) {
-		for (Task t : queue) {
-			if (t.getId() == id)
-				return t;
+		if (queue.isEmpty()) {
+			System.out.println("Task list is empty.");
+		} else {
+			for (Task t : queue) {
+				if (t.getId() == id)
+					return t;
+			}
 		}
 		return null;
 	}
+
 	/*
 	 * Method to delete task anywhere in the queue by id.
 	 */
 	public void deleteTaskById(int id) {
-		for(Task t: queue) {
-			if(t.getId() == id) {
-				System.out.println(t + "  Has Been Removed.");
-				queue.remove(t);
+		if (queue.isEmpty()) {
+			System.out.println("Task list is empty.");
+		} else {
+			for (Task t : queue) {
+				if (t.getId() == id) {
+					System.out.println(t + "  Has Been Removed.");
+					queue.remove(t);
+				}
 			}
 		}
 	}

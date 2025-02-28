@@ -11,18 +11,20 @@ public class QueueApp {
 		Scanner scanner = new Scanner(System.in);
 		int input = 0;
 		/*
-		 * Interface so a user can add/remove/removeById/search tasks and print a list of the tasks.
+		 * Interface so a user can add/remove/removeById/search tasks and print a list
+		 * of the tasks.
 		 */
 		while (input != 6) {
-			System.out.println("Press 1 To Add a Task to the Queue: ");
-			System.out.println("Press 2 To List All the Tasks: ");
-			System.out.println("Press 3 To Remove Front Task: ");
-			System.out.println("Press 4 Search for a Task by Id: ");
-			System.out.println("Press 5 To Delete a Task by Id: ");
-			System.out.println("Press 6 to Exit the Application: ");
+			System.out.println("[------Task Queue Menu------]");
+			System.out.println("[Press 1] To Add a Task to the Queue: ");
+			System.out.println("[Press 2] To List All the Tasks: ");
+			System.out.println("[Press 3] To Remove Front Task: ");
+			System.out.println("[Press 4] To Search for a Task by Id: ");
+			System.out.println("[Press 5] To Delete a Task by Id: ");
+			System.out.println("[Press 6] To Exit the Application: ");
 			input = scanner.nextInt();
 			scanner.nextLine();
-			
+
 			switch (input) {
 			case 1:
 				System.out.println("Enter the Task Id: ");
@@ -46,11 +48,10 @@ public class QueueApp {
 				System.out.println("Enter Id");
 				int idSearch = scanner.nextInt();
 				scanner.nextLine();
-				if(queueService.searchById(idSearch) == null) {
+				if (queueService.searchById(idSearch) == null) {
 					System.out.println("Task by That Id Does Not Exist");
-				}
-				else {
-				System.out.println(queueService.searchById(idSearch));
+				} else {
+					System.out.println(queueService.searchById(idSearch));
 				}
 				break;
 			case 5:
@@ -60,11 +61,11 @@ public class QueueApp {
 				queueService.deleteTaskById(idDelete);
 				break;
 			case 6:
-				System.out.println("System exiting...");
+				System.out.println("System Exiting...");
 				break;
 			default:
-				System.out.println("Wrong Number. Please enter a number between 1 and 6: ");
-				
+				System.out.println("Wrong Number. Please Enter a Number Between 1 and 6: ");
+
 			}
 		}
 		scanner.close();
